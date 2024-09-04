@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs com Imagens e Cores Diferentes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+      
+<style>
+
+.dourado {
+
+z-index: 15000;
+position: relative;
+position: absolute;
+width: 400px;
+height: 100px;
+transition: scale ease 0.3s;
+          
+}
+        
+.dourado:hover {
+scale: 1.1;
+}
+
+
+.textodourado{
+position: relative;
+position: absolute;
+right: 410px;
+top:100px;
+
+
+}
+
+ /* Substitua pelo caminho da sua imagem */
+
+.form-container {
+  
+border-radius: 15px; /* Borda arredondada */
+padding: 3px; /* Espaçamento interno */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+width: 210px; /* Largura do formulário */
+position: absolute; /* Permite o posicionamento absoluto */
+top: 230px; /* Distância do topo da página */
+right: 115px; /* Distância da borda direita */
+opacity: [valor entre 0 e 1] ;
+
+}
+
+.form {
+display: flex;
+flex-direction: column; /* Organiza os campos em coluna */
+color: rgb(255, 255, 255);
+font-size: 12px;
+text-align: left;
+justify-content: flex-start;
+
+}
+
+label {
+margin-bottom: 3px; /* Espaçamento entre o rótulo e o campo */
+}
+
+input, textarea {
+margin-bottom: 2px; /* Espaçamento entre os campos */
+padding: 8px; /* Espaçamento interno dos campos */
+border: 1px solid #ccc; /* Borda padrão */
+border-radius: 20px; /* Bordas arredondadas para os campos */
+font-size: 8px; /* Tamanho da fonte dos campos */
+}
+
+textarea {
+resize: none; /* Impede o redimensionamento do textarea */
+height: 10px; /* Altura fixa para o textarea */
+}
+
+button {
+padding: 10px;
+border: none;
+border-radius: 15px; /* Borda arredondada para o botão */
+background-color: rgb(0, 0, 0); /* Cor de fundo laranja */
+color: rgb(255, 255, 255); /* Cor do texto do botão */
+font-size: 14px; /* Tamanho da fonte */
+cursor: pointer; /* Muda o cursor ao passar o mouse */
+transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+background-color: rgb(255, 219, 88); /* Cor do botão ao passar o mouse */
+}
+
+
+
+.logo {
+        width: 200px; /* Nova largura das imagens */
+        height: 100px; /* Ajustar altura proporcionalmente */
+        transition: scale ease 0.3s;
+        position: absolute;
+        z-index: 2000;
+        
+    }
+        
+    .logo:hover {
+    scale: 1.1;
+    }
+    
+.moverlogo {
+position: relative;
+position: absolute;
+top: 0;
+left: 0;
+margin-top: -3px; /* Espaço para o cabeçalho fixo */
+padding: 10px;
+padding-left;: 0px
+
+}
+
+
+
+
+.top-div {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: #000000;
+color: white;
+box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+z-index: 1000;
+    }
+
+    .navbar {
+display: flex;
+justify-content: flex-end; /* Alinha o menu à direita */
+align-items: center;
+height: 50px;
+padding-right: 20px; /* Espaçamento à direita */
+}
+    
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+    
+.navbar li {
+margin: 0 10px;
+
+}
+    
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 14px 20px;
+        display: block;
+        transition: background 0.3s;
+        font-family:Arial;
+    }
+    
+    .navbar a:hover {
+        background-color: #b8b8b8;
+        border-radius: 4px;
+    }
+
+
+    .navbar {
+display: flex;
+justify-content: flex-end; /* Alinha o menu à direita */
+align-items: center;
+height: 55px;
+padding-right: 20px; /* Espaçamento à direita */
+
+}
+    
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+    
+.navbar li {
+margin: 0 10px;
+
+}
+
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        /* acrescentei */
+        overflow-x: hidden;
+    }
+    .full-width-div {
+        width: 100%;
+        height: 100vh; /* Ajuste a altura conforme necessário */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        background-size: cover; /* Cobre toda a área da div */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Não repete a imagem */
+    }
+
+    .red {
+        
+        background-image: url("./talithabg.jpg"); /* Substitua pelo caminho da sua imagem */
+        
+    }
+    
+      
+    .green {
+       
+      background-image: url("montagem.jpg"); /* Substitua pelo caminho da sua imagem */
+  }
+    
+.whatsapplink {
+
+position: absolute;
+position: fixed;
+z-index: 2000;
+cursor: pointer;
+width: 60px;
+height: 60px;
+bottom: 15px;
+background-color:#25d366
+color: #fff;
+border-radius: 50px;
+text-align: center;
+font-size: 36px;
+box-shadow: 1px 1px 2px #888
+float:left;
+background-image: url('zap.svg'); /* teste acrescentei */
+background-repeat: no-repeat;
+transition: scale ease 0.3s;
+top: 3px;
+right: -15px;      
+}
+
+ 
+.whatsapplink:hover {
+ scale: 1.1;
+      
+}
+
+/* Redes Sociais */
+
+.sociais{
+z-index: 1100;
+  position: absolute;
+  position: relative;
+  top: 410px;
+
+}
+
+
+ul.box-redes-sociais {
+
+display: flex;
+background: transparent;
+width: 100px;
+float: none;
+margin: auto;
+
+}
+
+ul.box-redes-sociais li {
+list-style: none;
+margin: auto;
+}
+
+
+ul.box-redes-sociais li a {
+
+width: 50px;
+height: 50px;
+background-color: #fff;
+text-align: center;
+line-height: 45px;
+font-size: 22px;
+margin: 0 5px;
+display: block;
+border-radius: 50%;
+position: relative;
+overflow: hidden;
+border: 2px solid #eaeaea;
+z-index: 1;
+right:-262px ;
+
+}
+
+ul.box-redes-sociais li a .icon {
+position: relative;
+color: #262626;
+transition: .3s;
+z-index: 3;
+}
+
+ul.box-redes-sociais li a:hover .icon {
+color: #fff;
+scale: 1.2;
+}
+
+ul.box-redes-sociais li a:before {
+content: "";
+position: absolute;
+top: 100%;
+right: 0;
+width: 100%;
+height: 100%;
+background: #f00;
+transition: .6s;
+z-index: 2;
+}
+
+ul.box-redes-sociais li a:hover:before {
+top: 0;
+}
+
+ul.box-redes-sociais li.facebook a:before{
+background: #3b5999;
+}
+
+ul.box-redes-sociais li.instagram a:before{
+background:hsl(0 0% 10%);
+background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+/* rodape */
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: -177px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.perfil {
+
+color: #000000;
+font-size: 20px;
+position: absolute;
+position: relative;
+top:-680px;
+right: -515px;
+
+
+}
+
+
+.descricao{
+font-size: 14px;
+
+}
+
+/* slide */
+
+.carrossel {
+  width: 100%; /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite do carrossel */
+  position: relative; /* Permite posicionamento absoluto dos itens internos */
+}
+
+.carrossel .container {
+  display: flex; /* Alinha os itens horizontalmente */
+  width: 400%; /* Ajusta a largura do contêiner interno para acomodar todas as imagens */
+  height: 100%; /* Garante que o contêiner interno ocupe toda a altura do carrossel */
+  transition: transform 0.5s ease; /* Transição suave para a mudança de imagem */
+}
+
+.carrossel img {
+  width: 100vw; /* Ajusta a largura das imagens para preencher a largura da viewport */
+  height: 100vh; /* Ajusta a altura das imagens para preencher a altura da viewport */
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner mantendo a proporção */
+  display: block; /* Remove o espaço abaixo das imagens */
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <div class="sociais"> 
+      <ul class="box-redes-sociais">
+
+        <li class="facebook">
+          <a href="https://www.facebook.com/dratalithagallerani?paipv=0&eav=Afakb1oidae5UA-qZHhSviwXysbcNbUzb00-jGG95THFJw6RLDKV67D4DV4Lr6Ht3RA&_rdr"><i class="fab fa-facebook-f icon"></i></a>
+        </li>
+        
+             
+        <li class="instagram">
+          <a href="https://www.instagram.com/dra.talithagallerani/"><i class="fab fa-instagram icon"></i></a>
+        </li>
+            
+      </ul>
+    </div>
+
+    <div class="textodourado">
+        <img class="dourado" src="dourado.png" alt="">
+    </div>
+
+
+    <div class="popup">
+
+        <a href="https://wa.me/5519983359000" target="_blank" class="whatsapplink"></a> 
+                
+    </div>
+    <div class="form-container"> <!--  -->
+        <form class="form">
+            
+            <label for="email"></label>
+            <input type="text" name="nome" value="" placeholder="Nome" />
+            
+                            
+            <label for="email"></label>
+            <input type="text" name="nome" value="" placeholder="E-mail" />
+
+            <label for="Telefone"></label>
+            <input type="text" name="nome" value="" placeholder="Telefone" />
+
+            <label for="mensagem"></label>
+            <textarea id="mensagem" name="mensagem" required placeholder="Mensagem"></textarea>
+            
+            <button type="submit">Quero Me Inscrever</button>
+        </form>
+    </div>
+
+    <div class="moverlogo">
+        <img class="logo" src="./logo.png" alt="">
+    </div>
+    <div class="top-div">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#início">Início</a></li>
+                <li><a href="#ancorasobre">Sobre</a></li>
+                <li><a href="#rodape">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    
+    <div class="full-width-div red"> </div>
+
+    <div class="carrossel">
+        <div class="container">
+          <img src="./imagem1.jpg" alt="" />
+          <img src="./imagem2.jpg" alt="" />
+          <img src="./imagem3.jpg" alt="" />
+        </div>
+      </div>
+    </body>
+    
+
+    
+    
+    <div class="full-width-div green" id="ancorasobre"></div>
+
+    
+      
+    <div class="perfil"><br>
+    <h4>Sobre Mim</h4>
+    <p class="descricao">
+Dra. Talitha Gallerani atua há mais de 10 anos em implantodontia. <br>
+É especialista em Protocolo Carga Imediata e Harmonização Facial. <br>
+Possui também especializações em Rinomodelaçã, Plastimoplastia <br>
+e em CTBMF.
+
+    </p>
+
+    </div>
+    
+    
+    
+
+        <footer id="rodape">
+        
+            <p>&copy; Todos os direitos reservados. Desenvolvido por HFB Design</p>
+        <nav>
+            <ul>
+                <li><a href="#">Termos de uso</a></li>
+                <li><a href="#">Política de privacidade</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+    <script>
+
+const box = document.querySelector(".container");
+const imagens = document.querySelectorAll(".container img");
+
+let contador = 0;
+
+function slider() {
+  contador++;
+
+  if (contador > imagens.length - 1) {
+    contador = 0;
+  }
+
+  // Corrige a largura total do container interno para acomodar o número de imagens
+  const larguraImagem = document.querySelector(".carrossel img").clientWidth;
+  box.style.transform = `translateX(${-contador * larguraImagem}px)`;
+}
+
+// Intervalo de 4000 milissegundos (4 segundos)
+setInterval(slider, 3000);
+
+
+    </script>
+    
+</body>
+</html>
